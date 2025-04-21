@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Resume Website</title>
+  <style>
+    body {
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #272727;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+
+    header {
+      background-color: rgba(10, 202, 202, 0.85);
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;    }
+
+    .headTitle {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 12px;
+      border: none;
+      background-color: #00ffff;
+      color: #272727;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ffff;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00b3b3;
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+
+    #resume {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      display: none;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgb(245, 245, 245);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      animation: slideIn 0.8s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+  <main>
+    <p>Click the button to see my personal info:</p>
+    <button onclick="showResume()">Click</button>
+    <div id="resume">
+      <h2 class="headTitle">My Resume</h2>
+      <p><strong>Name:</strong> Alfred Asley R Canoy Jr.</p>
+      <p><strong>Email:</strong> Alpecanoy45@gmail.com</p>
+      <p><strong>Course:</strong> Bachelor of Science in Information System</p>
+      <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python</p>
+      <p><strong>Experience:</strong></p>
+      <ul>
+        <li>Cashier (2023)</li>
+        <li>Baker's Assistant (2021–2022)</li>
+      </ul>
+      <p><strong>Educational Background:</strong></p>
+      <ul>
+        <li>Primary: Tukuran SPED Center</li>
+        <li>Secondary: Tukuran Technical Vocational High School</li>
+        <li>Tertiary: Zamboanga Del Sur Provincial Government College</li>
+      </ul>
+      <h2 class="headTitle">About Me:</h2>
+      <p><strong>Hi, it’s a pleasure to meet you! You can call me Asli for short. I’m a BSIS-ACT student, currently in my first year of college. I’m mastering HTML, CSS, and JavaScript — it’s quite challenging, but I hope you enjoy this website!</strong></p>
+    </div>
+  </main>
+
+  <script>
+    function showResume() {
+      const resume = document.getElementById("resume");
+      resume.style.display = "block";
+      resume.style.animation = "slideIn 0.8s ease-out";
+    }
+  </script>
+</body>
+</html>
